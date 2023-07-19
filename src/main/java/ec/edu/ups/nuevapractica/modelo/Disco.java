@@ -3,19 +3,21 @@ package ec.edu.ups.nuevapractica.modelo;
 import java.util.Objects;
 
 public class Disco {
+
     private int codigo;
     private String nombre;
     private int anioDeLanzamiento;
 
     //Constructores
-    public Disco() {   
+    public Disco() {
     }
-    
+
     public Disco(int codigo, String nombre, int anioDeLanzamiento) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.anioDeLanzamiento = anioDeLanzamiento;
     }
+
     // get y set
     public int getCodigo() {
         return codigo;
@@ -33,15 +35,13 @@ public class Disco {
         this.nombre = nombre;
     }
 
-    public int getAnioDeLanzamiento() {
+    public int getAnioLanzamiento() {
         return anioDeLanzamiento;
     }
 
     public void setAnioDeLanzamiento(int anioDeLanzamiento) {
         this.anioDeLanzamiento = anioDeLanzamiento;
     }
-    
-    
 
     @Override
     public int hashCode() {
@@ -62,7 +62,7 @@ public class Disco {
             return false;
         }
         final Disco other = (Disco) obj;
-        if (Objects.equals(this.nombre, other.nombre)){
+        if (Objects.equals(this.nombre, other.nombre)) {
             return false;
         }
         return true;
@@ -73,4 +73,3 @@ public class Disco {
         return "\nDisco: " + "Codigo: " + codigo + "Nombre: " + nombre + "AnioDeLanzamiento: " + anioDeLanzamiento + '}';
     }
 }
-

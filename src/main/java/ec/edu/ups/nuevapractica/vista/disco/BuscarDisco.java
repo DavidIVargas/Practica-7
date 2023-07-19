@@ -310,7 +310,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
             disco = cantanteTempo.buscarDisco(Integer.parseInt(txtCodigo4.getText()));
             if (disco!=null) {
                 
-                txtAnioLanzamiento4.setText(String.valueOf(disco.getAnioDeLanzamiento()));
+                txtAnioLanzamiento4.setText(String.valueOf(disco.getAnioLanzamiento()));
                 txtNombreDisco4.setText(disco.getNombre());
             }else{
                 txtAnioLanzamiento4.setText("");

@@ -26,11 +26,12 @@ import ec.edu.ups.nuevapractica.vista.disco.AgregarDisco;
 import ec.edu.ups.nuevapractica.vista.disco.BuscarDisco;
 
 public class VentanaPrincipal extends javax.swing.JFrame {
+
     private ControladorCantante controladorCantante;
     private ICantanteDao cantanteDao;
     private ControladorCompositor controladorCompositor;
     private ICompositorDao compositorDao;
-    
+
     private EliminarCantante eliminarCantante;
     private CrearCantante ventanaCrearCantante;
     private BuscarCantante ventanaBuscarCantante;
@@ -49,15 +50,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private ActualizarDisco actualizarDisco;
     private AgregarCliente agregarCliente;
     private BuscarDisco buscarDisco;
+
     /**
      * Creates new form VentanaPrincipal
      */
     public VentanaPrincipal() {
         initComponents();
         cantanteDao = new CantanteDao();
-        controladorCantante = new ControladorCantante(cantanteDao) ;
-        compositorDao = new CompositorDao();
-        controladorCompositor = new ControladorCompositor(compositorDao);
+        controladorCantante = new ControladorCantante(cantanteDao);
+        //compositorDao = new CompositorDao();
+        //controladorCompositor = new ControladorCompositor(compositorDao);
+        ICompositorDao compositorDao = new CompositorDao();
+        ControladorCompositor controladorCompositor = new ControladorCompositor(compositorDao);
+
     }
 
     /**
@@ -348,104 +353,104 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void itemEliminarCantanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarCantanteActionPerformed
-        if(eliminarCantante == null){
+        if (eliminarCantante == null) {
             eliminarCantante = new EliminarCantante(controladorCantante);
             desktopPane.add(eliminarCantante);
         }
-        eliminarCantante.setVisible(true); 
+        eliminarCantante.setVisible(true);
     }//GEN-LAST:event_itemEliminarCantanteActionPerformed
 
     private void itemCrearCompositorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCrearCompositorActionPerformed
-        if(crearCompositor == null){
+        if (crearCompositor == null) {
             crearCompositor = new CrearCompositor(controladorCompositor);
             desktopPane.add(crearCompositor);
         }
-        crearCompositor.setVisible(true); 
+        crearCompositor.setVisible(true);
     }//GEN-LAST:event_itemCrearCompositorActionPerformed
 
     private void itemBuscarCompositorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarCompositorActionPerformed
-        if(buscarCompositor == null){
+        if (buscarCompositor == null) {
             buscarCompositor = new BuscarCompositor(controladorCompositor);
             desktopPane.add(buscarCompositor);
         }
-        buscarCompositor.setVisible(true); 
+        buscarCompositor.setVisible(true);
     }//GEN-LAST:event_itemBuscarCompositorActionPerformed
 
     private void itemCrearCantanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCrearCantanteActionPerformed
-        if(ventanaCrearCantante == null){
+        if (ventanaCrearCantante == null) {
             ventanaCrearCantante = new CrearCantante(controladorCantante);
             desktopPane.add(ventanaCrearCantante);
         }
-        ventanaCrearCantante.setVisible(true); 
+        ventanaCrearCantante.setVisible(true);
     }//GEN-LAST:event_itemCrearCantanteActionPerformed
 
     private void itemBuscarCantanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarCantanteActionPerformed
         // TODO add your handling code here:
-        if(ventanaBuscarCantante == null){
+        if (ventanaBuscarCantante == null) {
             ventanaBuscarCantante = new BuscarCantante(controladorCantante);
             desktopPane.add(ventanaBuscarCantante);
         }
-        ventanaBuscarCantante.setVisible(true); 
+        ventanaBuscarCantante.setVisible(true);
     }//GEN-LAST:event_itemBuscarCantanteActionPerformed
 
     private void itemCrearCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCrearCancionActionPerformed
-        if(agregarCancion == null){
+        if (agregarCancion == null) {
             agregarCancion = new AgregarCancion(controladorCompositor);
             desktopPane.add(agregarCancion);
         }
-        agregarCancion.setVisible(true); 
+        agregarCancion.setVisible(true);
     }//GEN-LAST:event_itemCrearCancionActionPerformed
 
     private void itemActualizarCantanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemActualizarCantanteActionPerformed
         // TODO add your handling code here:
-        if(actualizarCantante == null){
+        if (actualizarCantante == null) {
             actualizarCantante = new ActualizarCantante(controladorCantante);
             desktopPane.add(actualizarCantante);
         }
-        actualizarCantante.setVisible(true); 
-        
+        actualizarCantante.setVisible(true);
+
     }//GEN-LAST:event_itemActualizarCantanteActionPerformed
 
     private void itemListarCantanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemListarCantanteActionPerformed
         // TODO add your handling code here:
-        if(listarCantante == null){
+        if (listarCantante == null) {
             listarCantante = new ListarCantante(controladorCantante);
             desktopPane.add(listarCantante);
         }
-        listarCantante.setVisible(true); 
+        listarCantante.setVisible(true);
     }//GEN-LAST:event_itemListarCantanteActionPerformed
 
     private void itemActualizarCompositorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemActualizarCompositorActionPerformed
-        if(actualizarCompositor == null){
+        if (actualizarCompositor == null) {
             actualizarCompositor = new ActualizarCompositor(controladorCompositor);
             desktopPane.add(actualizarCompositor);
         }
-        actualizarCompositor.setVisible(true); 
+        actualizarCompositor.setVisible(true);
     }//GEN-LAST:event_itemActualizarCompositorActionPerformed
 
     private void itemEliminarCompositorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarCompositorActionPerformed
-        if(eliminarCompositor == null){
+        if (eliminarCompositor == null) {
             eliminarCompositor = new EliminarCompositor(controladorCompositor);
             desktopPane.add(eliminarCompositor);
         }
-        eliminarCompositor.setVisible(true); 
+        eliminarCompositor.setVisible(true);
     }//GEN-LAST:event_itemEliminarCompositorActionPerformed
 
     private void itemListarCompositorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemListarCompositorActionPerformed
-        if(listarCompositor == null){
+        if (listarCompositor == null) {
             listarCompositor = new ListarCompositor(controladorCompositor);
             desktopPane.add(listarCompositor);
         }
-        listarCompositor.setVisible(true); 
+        listarCompositor.setVisible(true);
     }//GEN-LAST:event_itemListarCompositorActionPerformed
 
     private void itemCrearDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCrearDiscoActionPerformed
         // TODO add your handling code here:
-        if(agregarDisco == null){
+        if (agregarDisco == null) {
             agregarDisco = new AgregarDisco(controladorCantante);
             desktopPane.add(agregarDisco);
         }
-        agregarDisco.setVisible(true); 
+        agregarDisco.setVisible(true);
     }//GEN-LAST:event_itemCrearDiscoActionPerformed
 
     private void menuItemEspañolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemEspañolActionPerformed
@@ -459,15 +464,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void itemActualizarDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemActualizarDiscoActionPerformed
         // TODO add your handling code here:
-        if(actualizarDisco == null){
+        if (actualizarDisco == null) {
             actualizarDisco = new ActualizarDisco(controladorCantante);
             desktopPane.add(actualizarDisco);
         }
-        actualizarDisco.setVisible(true); 
+        actualizarDisco.setVisible(true);
     }//GEN-LAST:event_itemActualizarDiscoActionPerformed
 
     private void itemBuscarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarCancionActionPerformed
-        if(buscarCacion == null){
+        if (buscarCacion == null) {
             buscarCacion = new BuscarCancion(controladorCompositor);
             desktopPane.add(buscarCacion);
         }
@@ -475,7 +480,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_itemBuscarCancionActionPerformed
 
     private void itemActualizarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemActualizarCancionActionPerformed
-        if(actualizarCancion == null){
+        if (actualizarCancion == null) {
             actualizarCancion = new ActualizarCancion(controladorCompositor);
             desktopPane.add(actualizarCancion);
         }
@@ -483,7 +488,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_itemActualizarCancionActionPerformed
 
     private void itemEliminarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarCancionActionPerformed
-        if(eliminarCancion == null){
+        if (eliminarCancion == null) {
             eliminarCancion = new EliminarCancion(controladorCompositor);
             desktopPane.add(eliminarCancion);
         }
@@ -491,12 +496,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_itemEliminarCancionActionPerformed
 
     private void editMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editMenuActionPerformed
-         
+
     }//GEN-LAST:event_editMenuActionPerformed
 
     private void menuItemAgregarCliemtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemAgregarCliemtActionPerformed
-        if(agregarCliente == null){
-            agregarCliente = new AgregarCliente(controladorCompositor,controladorCantante);
+        if (agregarCliente == null) {
+            agregarCliente = new AgregarCliente(controladorCompositor, controladorCantante);
             desktopPane.add(agregarCliente);
         }
         agregarCliente.setVisible(true);
@@ -504,7 +509,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void itemBuscarDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarDiscoActionPerformed
         // TODO add your handling code here:
-        if(buscarDisco == null){
+        if (buscarDisco == null) {
             buscarDisco = new BuscarDisco(controladorCantante);
             desktopPane.add(buscarDisco);
         }

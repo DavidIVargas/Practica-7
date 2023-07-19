@@ -80,7 +80,7 @@ public class Cantante extends Persona {
         for (Disco disco : discografia) {
             if (disco.getCodigo() == discoActualizado.getCodigo()) {
                 disco.setNombre(discoActualizado.getNombre());
-                disco.setAnioDeLanzamiento(discoActualizado.getAnioDeLanzamiento());
+                disco.setAnioDeLanzamiento(discoActualizado.getAnioLanzamiento());
                 System.out.println("Disco actualizado correctamente.");
                 return;
             }

@@ -102,7 +102,7 @@ public class ListarCantante extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSalirActionPerformed
-        // TODO add your handling code here:
+//        // TODO add your handling code here:
         this.setVisible(false);
     }//GEN-LAST:event_bntSalirActionPerformed
 

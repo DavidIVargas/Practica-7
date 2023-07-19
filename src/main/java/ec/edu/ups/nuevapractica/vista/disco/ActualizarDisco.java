@@ -383,7 +383,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
             disco = cantanteTempo.buscarDisco(Integer.parseInt(txtCodigo4.getText()));
             if (disco!=null) {
                 txtCodigo4.setEnabled(false);
-                txtAnioLanzamiento4.setText(String.valueOf(disco.getAnioDeLanzamiento()));
+                txtAnioLanzamiento4.setText(String.valueOf(disco.getAnioLanzamiento()));
                 bntActualizar.setEnabled(true);
                 txtAnioLanzamiento4.setEnabled(true);
                 txtNombreDisco4.setEnabled(true);

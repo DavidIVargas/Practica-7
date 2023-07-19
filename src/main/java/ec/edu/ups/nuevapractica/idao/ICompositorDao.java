@@ -8,8 +8,7 @@ public interface ICompositorDao {
     public void create(Compositor compositor);
     public Compositor read(int codigo);
     public void update(Compositor compositor);
-    public void delete(Compositor compostior);   
+    public void delete(Compositor compositor);   
     public Compositor buscarPorTituloDeCancion(String valor);
     public List<Compositor> findAll();
-    
 }
